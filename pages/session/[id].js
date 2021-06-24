@@ -4,7 +4,8 @@ import { Button, Input } from 'reactstrap';
 import { useRouter } from 'next/router'
 import ModalCreateUser from './modal-create-user';
 
-const ENDPOINT = process.env.URL || 'http://127.0.0.1:3001';
+const ENDPOINT = process.env.ENDPOINT || 'http://127.0.0.1:3001';
+console.log(process.env.ENDPOINT);
 const socket = socketIOClient(ENDPOINT, {
   extraHeaders: {
     'Access-Control-Allow-Origin': '*'
